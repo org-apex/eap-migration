@@ -42,7 +42,7 @@ spec:
         - name: CONTEXT_DIR
           value: "$(params.context-path)"
         - name: GOALS
-          value: ["-DskipTests", "clean", "compile"]
+          value: ["-DskipTests", "compile"]
     - name: mvn-tests
       taskRef:
         name: maven

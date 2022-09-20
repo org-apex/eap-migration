@@ -30,12 +30,7 @@ spec:
       timeout: 1h0m0s
       workspaces:
         - name: shared-workspace
-          volumeClaimTemplate:
-            spec:
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 1000Mi
+          persistentVolumeClaim:
+            claimName: eap-maven-repo-pvc
         - emptyDir: {}
           name: maven-settings
